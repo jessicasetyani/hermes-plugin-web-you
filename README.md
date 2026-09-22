@@ -53,7 +53,8 @@ provider 'you'` even when everything is configured correctly
 ## Verify
 
 ```bash
-hermes plugins doctor web-you   # or the repo name, depending on install path
+hermes plugins list | grep -i you   # catat KEY yang tertera (tergantung jalur install)
+hermes plugins doctor <KEY>         # mis. "web/you" utk layout kategori lokal
 ```
 
 Then ask the agent anything requiring fresh web info — search should
