@@ -1,0 +1,6 @@
+name: base-web-you
+description: "Fleet pin for the You.com native backend (web-you 1.0.0)."
+version: 1.0.0
+plugins:
+  - repo: https://github.com/jessicasetyani/hermes-plugin-web-you.git
+    ref: cb5156d05ef06eec8d937207b85093b156cd5786
