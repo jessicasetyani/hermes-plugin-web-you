@@ -43,7 +43,12 @@ both search and extract):
 hermes config set web.backend you
 ```
 
-Takes effect on next session.
+Takes effect on next session. On Nous-cloud/dashboard installs:
+after plugin install + env + config, **restart the gateway and the
+dashboard** before testing — the backend is picked up at process
+start, and a stale process reports `no registered web search
+provider 'you'` even when everything is configured correctly
+(observed 22 Sep 2026).
 
 ## Verify
 
@@ -61,7 +66,7 @@ return in ~1s with 5 results.
 | `403 Forbidden` on search | Wrong base host (known drift: `api.ydc-index.io` vs `ydc-index.io`) | Set `YDC_BASE_URL` to the working host, no code change |
 | `429` on extract bursts | Snippets/contents rate limit | Built-in single retry; space out bulk extracts |
 | `contents too thin` error | Page blocked / JS-only / empty | Honest failure by design — fall back to another backend, do not retry blindly |
-| `no registered web search provider 'you'` | Stale session (started before install) | Start a new session |
+| `no registered web search provider 'you'` | Stale session (started before install) | Start a new session; on cloud installs, restart gateway + dashboard first |
 
 ## Versioning
 
