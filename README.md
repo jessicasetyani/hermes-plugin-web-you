@@ -53,8 +53,9 @@ provider 'you'` even when everything is configured correctly
 ## Verify
 
 ```bash
-hermes plugins list | grep -i you   # catat KEY yang tertera (tergantung jalur install)
-hermes plugins doctor <KEY>         # mis. "web/you" utk layout kategori lokal
+hermes plugins doctor "web/you"   # path key utk layout kategori lokal.
+# NB: `plugins list` menampilkan ID "web-you" (nama manifest) —
+# ID itu TIDAK berlaku untuk doctor; doctor mau path key.
 ```
 
 Then ask the agent anything requiring fresh web info — search should
