@@ -9,7 +9,7 @@ Makes You.com a first-class `web.backend` for Hermes Agent
 
 Provenance: benchmarked 22 Sep 2026 against Perplexity, Tavily and Jina
 (10 search queries + 5 extract URLs, Direct REST) — You.com scored 4.52/5,
-best overall. See the decision note linked below.
+best overall. Decision rationale is recorded in the internal benchmark note.
 
 ## Install
 
@@ -53,10 +53,10 @@ provider 'you'` even when everything is configured correctly
 ## Verify
 
 ```bash
-hermes plugins doctor "web/you"   # macOS/Linux, layout kategori lokal
-hermes plugins doctor web-you     # Windows (pakai ID manifest)
-# NB: `plugins list` menampilkan ID manifest ("web-you") —
-# di macOS/Linux doctor mau path key ("web/you"); di Windows sebaliknya.
+hermes plugins doctor "web/you"   # macOS/Linux, local category layout
+hermes plugins doctor web-you     # Windows (uses the manifest ID)
+# Note: `plugins list` shows the manifest ID ("web-you").
+# On macOS/Linux, doctor expects the path key ("web/you"); on Windows it is the reverse.
 ```
 
 Then ask the agent anything requiring fresh web info — search should
