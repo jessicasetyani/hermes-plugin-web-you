@@ -142,8 +142,8 @@ class YouWebSearchProvider(WebSearchProvider):
             "badge": "paid",
             "tag": "You.com web search + full-page contents. Requires YDC_API_KEY.",
             "env_vars": [
-                {"name": "YDC_API_KEY", "label": "You.com API key", "url": _KEY_DOC_URL},
-                {"name": "YDC_BASE_URL", "label": "You.com API base override (optional)", "url": _API_REF},
+                {"key": "YDC_API_KEY", "prompt": "You.com API key", "url": _KEY_DOC_URL},
+                {"key": "YDC_BASE_URL", "prompt": "You.com API base override (optional)", "url": _API_REF},
             ],
             "docs_url": _API_REF,
         }
