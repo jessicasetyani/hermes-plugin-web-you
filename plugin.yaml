@@ -1,5 +1,5 @@
 name: web-you
-version: 1.0.0
+version: 1.1.0
 description: "You.com web search + full-page contents. Requires YDC_API_KEY — get one at https://you.com/platform. Docs: https://you.com/docs/api-reference/search/v1-search."
 author: Ali Naga Saputra
 kind: backend
